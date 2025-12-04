@@ -6,3 +6,9 @@ A custom Keycloak Docker image designed for CI/CD environments with changed comm
 
 This hopefully becomes obsolete once either:
 - [GitHub Actions suck](https://github.com/orgs/community/discussions/52675) [less](https://github.com/orgs/community/discussions/52675)
+
+Adds the following CMD to Keycloak:
+
+```dockerfile
+CMD [ "start-dev", "--metrics-enabled=true", "--health-enabled=true", "--import-realm" ]
+```
