@@ -60,6 +60,9 @@ jobs:
       - name: Download Artifacts
         uses: actions/download-artifact@v4
 
+      - name: List files
+        run: ls -la
+
       - name: Load Docker
         run: |
           docker load -i docker-amd/keycloak-cicd.tar
